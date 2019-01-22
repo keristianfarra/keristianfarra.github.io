@@ -1,25 +1,40 @@
 <!DOCTYPE html> 
-<html> 
-    <head> 
-        <meta charset="utf-8"> 
-        <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
-
-        <title>Example Student's HCDE 439 Physical Computing Page!</title> 
-
-        <link href="style.css" media="screen" rel="stylesheet" type="text/css" />
-
-    </head> 
-    <body> 
-
-        <div class="header">
-            <h1>Example Student's Assignment 2!</h1>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
+      <title>Keristian Farra's HCDE 439 Physical Computing Page!</title>
+      <link href="style.css" media="screen" rel="stylesheet" type="text/css" />
+   </head>
+   <body>
+      <div class="header">
+         <h1> Assignment 2 : Fade !</h1>
+         <hr>
+         <font size="5">
+            <h2> Demo </h2>
+            <img src="fade.gif" width=400 height="400">   
+            <h2> Circuit </h2>
+            <img src="fadeCircuit.png" width=400>
             <p>
-            <img src="red-panda.jpg" width=400></a>
+               I used pin 2 for the pushbutton.The Green LED is connected to Pin 11. The Yellow LED is connected to Pin 9. The Red LED is connected to Pin 6. I have calcuated the resistance for each LED and then used 1kohms resistors for each LED to limit the current flowing through the LEDs.
+            </p>
+            <hr>
+            <h2> Schematic</h2>
+            <!img src="schematic.png" width=1213 height="800">
+            <p>
+               [Note: The calculation is the same for Green, Yellow, and Red LED]
             </p>
             <p>
-            Here is all the documentation for assignment 2!
+               Above is the schematic for the three LEDs. Although the calcuation shows the resistor as 160 ohms, the closest was 330 which broke my LED so I resorted to use 1000 ohms resistor for each LED [Green, Yellow, and Red] with 5V power from the Arduino board. I also used 20mA as the target current and 1.8V for the drop voltage[the same for the Green, Yellow, and Red LED].
             </p>
-        </div>
-        
-    </body>
+            <hr>
+            <h2> Code </h2>
+            <img src="A2Code.png" width=600 height="800">
+            <p>
+               Here is the code I wrote for the LEDs to fade. Read the comments on the code to understand how it works.  
+            <hr>
+            </p>
+         </font>
+      </div>
+   </body>
 </html>
