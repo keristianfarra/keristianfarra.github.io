@@ -22,35 +22,42 @@
             <img src="darkRedOn.jpg" width= "800" height="400">
             <img src="brightGreenOn.jpg" width= "800" height="400">
             <p>
-               I used pin A0 for LDR. The Green LED is connected to Pin 11. The Red LED is connected to Pin 9. I have calcuated the resistance for each LED and then used 1kohms resistors for each LED to limit the current flowing through the LEDs.
+               I used pin A0 for the LDR. The Green LED is connected to Pin 11. The Red LED is connected to Pin 9. 
             </p>
             <hr>
             <h2> Schematic</h2>
             <img src="sensorSchematic.png" width="600" height="600">
             <p>
-               Above is the schematic with the calculations for the two LEDs and the LDR. For the Green and Red LEDs the calcuation shows the resistor value as 160 ohms. Although the closest value was 330, I decided to use 1000 ohms resistor for each LED [Green and Red] with 5V power from the Arduino board because it was a safe choice. I also used 20mA as the target current and 1.8V for the drop voltage[the same for the Green and Red LED.
+               Above is the schematic with the calculations for the two LEDs and the LDR. For the Green and Red LEDs the calcuation shows the resistor value as 160 ohms. Although the closest value was 330, I decided to use 1000 ohms resistor for each LED [Green and Red] with 5V power from the Arduino board because it was a safe choice. I also used 20mA as the target current and 1.8V for the drop voltage[the same for the Green and Red LED. 
                The min. resistor value for LDR is  25 ohms. However, even with the LDR big amount of 5V would flow into the ground so I added a fixed 2000 ohms resistor to further reduce the flow[avoid the risk of equipment damage].
             </p>
             <hr>
             <h2> Code </h2>
             <img src="sensorCode.png" width=600 height="800">
             <p>
-               Here is the code I wrote for the Input Output: Sensors. 
+               Aboce is the code I wrote for the Input Output: Sensors. 
+            </p>
+            <p>
                What It Does: Reads an analog input pin, maps the result to a range from 0 to 255 and uses
-               the result to set the pulse width modulation (PWM) of an output pin. Also prints the results to the Serial Monitor.
-
-               I chose sensor value range 400-620 for the green because when I checked the Serial Moniter the value gets bigger as my finger moves aways from the sensor/LDR. Therefore, when the sensor value is higher than 400, it will print Happy and light the Green LED. [turns off the Red LED].ß
-
-               On the other hand, I choose 270-350 as the sensor value range because numbers were getting smaller as I get closer to the sensor.Therefore, when the sensor value is lower than 350, it will print Angery and ligths the Red LED[turns off the Green LED].
-               
+               the result to set the pulse width modulation (PWM) of an output pin. Also prints the results to the Serial Monitor. 
+            </p>
+            <p>
+               I chose sensor value range 400-620 for the green because when I checked the Serial Moniter the value gets bigger as my finger moves aways from the sensor/LDR. Therefore, when the sensor value is higher than 400, it will print Happy and light the Green LED. [turns off the Red LED].
+            </p>
+            <p>
+               On the other hand, I choose 270-350 as the sensor value range because numbers were getting smaller as I get closer to the sensor.Therefore, when the sensor value is lower than 350, it will print Angery and ligths the Red LED[turns off the Green LED]. 
+            </p>
+            <p>
                The Circuit:
                - potentiometer connected to analog pin A0.
-               Center pin of the potentiometer goes to the analog pin.
+               - Center pin of the potentiometer goes to the analog pin.
                side pins of the potentiometer go to +5V and ground
-               - Green LED connected from digital pin 11 to ground
+               - Green LED connected from digital pin 11 to ground 
                - Red LED connected from digital pin 9 to ground
-              
-               Read the comments on the code to understand how it works.  
+            </p>
+            <p>
+               **Read the comments on the code to understand how it works.  
+            </p>
             <hr>
             </p>
          </font>
