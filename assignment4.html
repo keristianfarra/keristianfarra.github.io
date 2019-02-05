@@ -1,67 +1,77 @@
 <!DOCTYPE html>
 <html>
-   <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
-      <title>Keristian Farra's HCDE 439 Physical Computing Page!</title>
-      <link href="style.css" media="screen" rel="stylesheet" type="text/css" />
-   </head>
-   <body>
-      <div class="header">
-         <h1> Assignment 4 : High(er) voltage and transistors!</h1>
-         <hr>
-         <font size="5">
-            <h2> Task </h2>
-            <p>Create a schematic, circuit, and code that uses a transistor to control load power separate from logic power. You have to use analogWrite(), a high-load output device, and an input sensor.
-            </p>
-            <hr>
-            <h2> Demo </h2>
-            <img src="A4Demo.gif" width= "800" height="400">
-            <hr>
-            <h2> Circuit </h2>
-            <img src="overviewCircuit.png" width= "500" height="400">
-            <img src="sideArdunioViewCircuit.png" width= "500" height="400">
-            <img src="breadboardCloseUpCircuit.png" width= "500" height="400">
 
-            <p>
-               I used pin A0 for the LDR. The  LED strip is connected to Pin 9 through the transistor.
-            </p>
-            <hr>
-            <h2> Schematic</h2>
-            <img src="schematicA4.png" width="800" height="600">
-            <p>Above is the schematic for this circuit. It shows how each part is connected.</P>
-            <img src="calcA4.png" width="800" height="600">
-            <p>
-                Here is the calculations for the LED strip, the LDR and the current in the lED.The min. resistor value for LDR is  25 ohms. However, even with the LDR big amount of 5V would flow into the ground so I added a fixed 10k ohms resistor to further reduce the flow[avoid the risk of equipment damage].
-            </p>
-            <hr>
-            <h2> Code </h2>
-            <img src="codeA4.png" width=800 height="800">
-            <p>
-               Aboce is the code I wrote for the High(er) voltage and transistors.
-            </p>
-            <p>
-               What It Does: Reads an analog input pin, maps the result to a range from 0 to 255 and uses
-               the result to set the pulse width modulation (PWM) of an output pin. Also prints the results to the Serial Monitor.
-            </p>
-            <p>
-               I chose sensor value range 400-620 for the green because when I checked the Serial Moniter the value gets bigger as my finger moves aways from the sensor/LDR. Therefore, when the sensor value is higher than 400, it will turns off the LED
-            </p>
-            <p>
-               On the other hand, I choose values lesss than 350 for the sensor value because numbers were getting smaller as I get closer to the sensor.Therefore, when the sensor value is lower than 350, the LED will turn on.
-            </p>
-            <p>
-            <ul>
-            The Circuit:
-               <li> The photoresistor connected to analog input pin A0.</li>
-            </ul>
-            </p>
-            <p>
-            Read the comments on the code to understand how it works.
-            </p>
-            <hr>
-            </p>
-         </font>
-      </div>
-   </body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
+  <title>Keristian Farra's HCDE 439 Physical Computing Page!</title>
+  <link href="style.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div class="header">
+    <h1> Assignment 4 : High(er) voltage and transistors!</h1>
+    <hr>
+    <font size="5">
+      <h2> Task </h2>
+      <p>Create a schematic, circuit, and code that uses a transistor to control load power separate from logic power. Use analogWrite(), a high-load output device, and an input sensor.
+      </p>
+      <hr>
+      <h2> Demo </h2>
+      <img src="A4Demo.gif" width="800" height="400">
+      <hr>
+      <h2> Circuit </h2>
+      <img src="overviewCircuit.png" width="500" height="400">
+      <img src="sideArdunioViewCircuit.png" width="500" height="400">
+      <img src="breadboardCloseUpCircuit.png" width="500" height="400">
+      <p>
+        <ul>
+          <li> The photoresistor connected to analog input [Pin A0].</li>
+          <li> Used the breadboard put all the pieces together [wires, resistors,transistor..] </li>
+          <li> Utilized the Arduino board for A0 Pin, Pin 9, Ground, & 5V.</li>
+          <li> Used one alligator clip to connect the negative side of the LEDs strip with the transistor which is connected to Pin 9.</li>
+          <li> Used another alligator clip to connect the positive side of the LEDs strip with positive side of the 5.5mm barrel Jack to screw terminal converter[power-12v].</li>
+          <li> Connected the negative side of the 5.5mm barrel Jack to screw terminal converter[power-12v] to the ground on the breadboard and connected the ground on the Arduino with the ground on the breadboard with wire.</li>
+          <li> Used 33 LEDs from the 300 LED strip</li>
+          <li> Used a transistor </li>
+          <li> Used a Photoresistor</li>
+          <li> Two 10k ohm resistors, one for transistor (for the LED strip) and one for the photoresistor.</li>
+          </li>
+        </ul>
+      </p>
+      <hr>
+      <h2> Schematic</h2>
+      <img src="schematicA4.png" width="800" height="600">
+      <p>Above is the schematic for this circuit. It shows how each part is connected.</P>
+      <img src="calcA4.png" width="800" height="600">
+      <p>
+        Here is the calculations for the LED strip, the LDR and the current in the lED.The min. resistor value for LDR is 25 ohms. However, even with the LDR big amount of 5V would flow into the ground so I added a fixed 10k ohms resistor to further
+        reduce the flow[avoid the risk of equipment damage]. I also used 10k ohms for the transistor to limit the amount of current flow. My circuit with 0.165A current is safe because the transistor can support upto 0.6A of current.
+      </p>
+      <hr>
+      <h2> Code </h2>
+      <img src="codeA4.png" width=800 height="800">
+      <p>
+        Aboce is the code I wrote for the High(er) voltage and transistors.
+      </p>
+      <p>
+        What It Does: Reads an analog input pin, maps the result to a range from 0 to 255 and uses
+        the result to set the pulse width modulation (PWM) of an output pin.
+      </p>
+      <p>
+        I chose sensor value range 400-620 for the green because when I checked the Serial Moniter the value gets bigger as my finger moves aways from the sensor/LDR. Therefore, when the sensor value is higher than 400, it will turns off the LED
+      </p>
+      <p>
+        On the other hand, I choose values lesss than 350 for the sensor value because numbers were getting smaller as I get closer to the sensor.Therefore, when the sensor value is lower than 350, the LED will turn on.
+      </p>
+
+      <p>
+        Read the comments on the code to understand how it works.
+      </p>
+      <hr>
+      </p>
+    </font>
+  </div>
+</body>
+
 </html>
