@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
+    <title>Keristian Farra's HCDE 439 Physical Computing Page!</title>
+    <link href="style.css" media="screen" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="header">
+      <h1> Assignment 5 : Motors!</h1>
+      <hr>
+      <font size="5">
+        <h2> Task </h2>
+        <p>Create a schematic, circuit, and code that uses an input device to control a motor! The input device will be the joystick and the motor can be the servo or the DC motor. I used servo motor. 
+        </p>
+        <hr>
+        <h2> Demo </h2>
+        <p>The circuit in action: left-right movement</p>
+        <img src="A5XDemo.gif" width="800" height="400">
+        <p> As seen below in another Demo GIF, I have also tried to control the motor using the up and down movement on the joystick [Y]. I changed all the variable to Y in the code and used A3 for y-position values </p>
+        <img src="A5YDemo.gif" width="800" height="400">
+        <hr>
+        <h2> Circuit </h2>
+        <img src="closeUpCircuit.png" width="800" rotate ="180" height="400">
+        <img src="topViewCircuit.png" width="800" height="400">
+        <p>
+          Above is the circuit and it shows how it is set-up.
+        </p>
+        <hr>
+        <h2> Schematic</h2>
+        <img src="schematicA5.png" width="800" height="600">
+        <p>Above is the schematic for this circuit. It shows how each part is connected. I utilized the breadboard to connect the parts with wires. For instance, connected the 5V and GND from the arduino board to the breadboard and then connected the 5V and GND from the servo motor and the joystick to the breadboard. The schematic simplified to shows that the all the 5Vs and GNDs are connected.</P>
+        <img src="JoystickMovement.png" width="800" height="600">
+        <p>Above is the Joystick movement values I found on Last Minute Engineers website. This is important because it shows the range of x-position and y-position values, which I used in my code to control the motor with the joystick.
+        <p>
+          I initially thought I need to use a resistor so that my Ardruino won't break so I attempt to use 10K ohms resistor, but the motor wouldn't turn on. I then used lower value resistor thinking the resistor was to high, but I learned there was not need for additional resistor and it worked. 
+        </p>
+        <hr>
+        <h2> Code </h2>
+        <img src="codeA5.png" width=1000 height="800">
+        <p>
+          Above is the code I wrote for the Motor. Read the comments on the code to understand how it works.
+        </p>
+        <hr>
+      </font>
+    </div>
+  </body>
+</html>
