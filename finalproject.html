@@ -8,37 +8,82 @@
    </head>
    <body>
       <div class="header">
-         <h1> Final Project : Hand held Battery Powered Fan !</h1>
+         <h1> Final Project : Multi-Color Night Lamp!</h1>
          <hr>
          <font size="5">
             <h2> Task </h2>
             <p>
-            !Summer is COMING!
-
-            My goal is to make a circuit that powers a fan using a battery and design a cylindrical container to hide the parts inside. The fan will be activated/deactivated using a button/switch.
+            Integrate your electronics skills into a PRODUCT.
+            </p>
+            <h2> Project Description </h2>
+            <p>
+            I made circuit that changes colors in gradient for my lamp. The lamp is controlled with a button. Detailed info is provided below. 
             </p>
             <hr>
             <h2> Demo </h2>
-            <p>A fan that you can take anywhere with you powered by replaceable battery.</p>
-            <img src="final.png" width="400">
+            <img src="finalProjectDemo.gif" height= "400" width="800">
+            <p>Rainbow Night Lamp with Pattern. I choose this color palette because it has ocean and calming vibe. </p>
             <hr>
             <h2> Circuit </h2>
-            <img src="final.png" width="400">
+            <img src="finalCircuit1.png" width="400">
+            <img src="finalCircuit2.png" width="400">
+            <img src="enclosedCircuit.png" width="400">
             <p>
-               Still processing.
+               I began setting up my circuit on the breadboard and once it worked as intended, I soldered the components to the Arduino uno protoshield to secure them in place. I hid the the LED Strip wires inside the top/tall cardboard closure and the circuit at the bottom cardboard closure. Only the button and power cord are accessible from the outside, but the cardboard lid for the circuit closure can easily be opened to change the code at any time.
+            </p>
+            
+            <hr>
+            <h2> Components Used</h2>
+            <p>
+            <ul>
+               <li> Button (because the button was small, I improvised and glued a stick to it so the lamp can be turned on or off by pressed on the stick) </li>
+               <li> 91 RGB LEDs (strip) </li>
+               <li> 5V Power Jack</li>
+               <li> 1k ohms resistor (additional for the LED strip since it already has its own resistor built in too) </li>
+               <li> 10k ohms resistor (for the button)</li>
+               <li> Jump wires </li>
+               <li> Arduino uno microcontroller</li>
+               <li> Arduino uno protoshield (components soldered to keep in place)</li>
+            </ul>
             </p>
             <hr>
+            <h2> Components Set-Up</h2>
+            <img src="theFinalCircuit.png" height= "600" width="800">
+                  <hr>
             <h2> Schematic</h2>
-            <img src="final.png" width="400">
+            <img src="finalSchematic.png" height= "800" width="1200">
+            <p> The schematic above shows how each of the components are connected to make the circuit work.</p>
+            <hr>
+            <h2> LED Set-Ups</h2>
+            <img src="LEDSetup.png" width="1200">
             <p>
-               Still processing.
+               <ul>
+               <li> The first set-up showed the LED strip which was unappealing</li>
+               <li> The second set-up was messy because it was wrapped on the metal and showing from the top, still unappealing </li>
+               <li> Lastly, I wrapped the LED on the cardboard enclosure for the pole neatly organize the LED Strip and maintain clear appearance from the outside.</li>
+            </ul>
+           
             </p>
+            <hr>
+            <h2> Experimental Color Palette</h2>
+            <img src="InitialColorLamp.gif" width="400">
+            <img src="WarmColor.gif" width="400">
+            <p>
+               I experimented with the Fast LED Color Palette, as you can see above you can use brighter or warmer colors. 
             <hr>
             <h2> Code </h2>
-            <img src="final.png" width="400">
+            <img src="finalCode1.png" width="800">
+            <img src="finalCode2.png" width="800">
+            <img src="finalCodeDoc.png" width="800">
+            <img src="finalCode3.png" width="800">
             <p>
-               Code is on the way.
-            <hr>
+             For this project I used RGB LED Strip to display the color palette I choose for my lamp. 
+            <h3>Disclaimer!</h3>
+            <ul>
+
+               <li> Utilized the FastLED Fire2012WithPalette code from Arduino example collection. </li>
+               <li> My friend Sam Spieth also helped with the setup because he is familier with FastLED.</li>
+            </ul>
             </p>
          </font>
       </div>
